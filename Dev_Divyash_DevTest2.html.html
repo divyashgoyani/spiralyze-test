@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/icon.png" />
+
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Get an intervention</title>
+</head>
+
+<body>
+    <div class="homesection w-full h-fit relative overflow-hidden">
+        <header class="w-full pt-20 relative flex items-center justify-between z-2">
+            <div class="h-fit grow logo">
+                <img src="./assets/logo.png" class="h-fit" />
+            </div>
+            <div class="navbar w-fit">
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#footer">Contact</a>
+                </nav>
+                <span>|</span>
+                <p>Call Now for a Consult<span>xxx.xxx.xxxx</span></p>
+            </div>
+            <div class="menuSecton flex justify-center rounded-full" onclick="menuHandler()">
+                <img src="./assets/menu.png" id="menu" class="h-full w-full" />
+                <img src="./assets/close.png" id="close" class="hide h-full w-full" />
+            </div>
+        </header>
+        <div class="hero w-full relative z-1 flex items-center">
+            <div class="content h-full grow">
+                <p>GET AN</p>
+                <p>INTERVENTION</p>
+                <p>Showing greater respect to older adults can be done in several ways : acknowledging and putting to use the talents and skills of older adults; creating intergenerational initiatives; and allowing older adults to stay active and independent for as long as possible.</p>
+            </div>
+            <div class="form-wrapper aspect-square shrink-0">
+                <h1 class="title">Contact Us</h1>
+                <form class="contact-form grow">
+                    <div class="form-row">
+                        <div class="form-column">
+                            <input type="text" id="fname" placeholder="First Name" class="form-input" required />
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-column">
+                            <input type="email" id="lname" placeholder="Last Name" class="form-input" required />
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <input type="tel" id="email" placeholder="Business Email" class="form-input" required />
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-column">
+                            <input type="text" id="company" placeholder="Company" class="form-input" required />
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <select id="country-select" class="form-select">
+                                <option value="" style="color: #b9b9b9" disabled selected>Country</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                </form>
+                <button type="submit" class="submit-button" onclick="validateForm()">
+                    <img src="./assets/send.png" />
+                    Submit
+                </button>
+            </div>
+        </div>
+
+        <!-- Backgrounds -->
+        <img src="./assets/background.png" class="h-full w-full absolute top-0 inset-x-0" style="object-fit: cover" />
+        <img src="./assets/layer1.png" class="w-full absolute left-0" style="bottom: -2px" />
+        <img src="./assets/layer2.png" class="w-full absolute left-0" style="bottom: -2px" />
+    </div>
+
+    <!-- Understand section -->
+    <div id="about" class="container w-full pt-20">
+        <div class="flex justify-between items-center hide-xs">
+            <div class="understand-img-wrapper aspect-video">
+                <img class="w-full object-fit--contain" src="./assets/about1.png" alt="Understand" />
+            </div>
+            <div class="understand-img-wrapper aspect-video ml-30 mr-30">
+                <img class="w-full object-fit--contain" src="./assets/about2.png" alt="Understand" />
+            </div>
+            <div class="understand-img-wrapper aspect-video">
+                <img class="w-full object-fit--contain" src="./assets/about3.png" alt="Understand" />
+            </div>
+        </div>
+        <h1 class="understand-title"><span class="stroke-title">WE</span> UNDERSTAND</h1>
+        <div class="flex justify-between items-start flex-wrap">
+            <div class="understand-text-wrapper">
+                <p class="understand-content">Showing greater respect to older adults can be done in several ways : acknowledging and putting to use the talents and skills of older adults; creating intergenerational initiatives; and allowing older adults to stay active and independent for as long as possible.</p>
+            </div>
+            <div class="understand-text-wrapper ml-30 mr-30">
+                <p class="understand-content">Showing greater respect to older adults can be done in several ways : acknowledging and putting to use the talents and skills of older adults; creating intergenerational initiatives; and allowing older adults to stay active and independent for as long as possible.</p>
+            </div>
+            <div class="understand-text-wrapper flex items-start flex-col">
+                <p class="understand-content">Showing greater respect to older adults can be done in several ways : acknowledging and putting to use the talents and skills of older adults; creating intergenerational initiatives; and allowing older adults to stay active and independent for as long as possible.</p>
+                <button type="button" class="primary-button mt-20 mb-20">
+                    <p>92% Success Rate 🡪</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="h-fit bg-white">
+        <!-- Carousel section -->
+        <div class="container h-fit w-full" style="padding-top: 0">
+            <div class="h-fit w-full flex justify-center items-center">
+                <div id="prev" class="shrink-0 mr-20" onclick="carouselHandler('prev')"><span>&lt;</span></div>
+                <div id="carousel" class="grow flex overflow-hidden">
+                    <div class="h-full w-full min-w-full flex items-center">
+                        <div class="image_wrapper h-full aspect-square shrink-0 mx-20 overflow-hidden">
+                            <img src="./assets/ca1.png" class="h-full w-full object-fit--cover" />
+                        </div>
+                        <div class="content_wrapper h-full grow mx-20 py-20 relative overflow-hidden">
+                            <img src="./assets/coma.png" class="absolute" />
+                            <h2 class="relative mb-10">Abbie Harvey</h2>
+                            <p class="relative">I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me being there for appointments. Older people need attention, love and care that they truly deserve.</p>
+                        </div>
+                    </div>
+                    <div class="h-full w-full min-w-full flex items-center">
+                        <div class="image_wrapper h-full aspect-square shrink-0 m-20 overflow-hidden">
+                            <img src="./assets/ca2.png" class="h-full w-full object-fit--cover" />
+                        </div>
+                        <div class="content_wrapper h-full grow m-20 py-20 relative">
+                            <img src="./assets/coma.png" class="absolute" />
+                            <h2 class="relative mb-10">Abbie Harvey</h2>
+                            <p class="relative">I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me being there for appointments. Older people need attention, love and care that they truly deserve.</p>
+                        </div>
+                    </div>
+                    <div class="h-full w-full min-w-full flex items-center">
+                        <div class="image_wrapper h-full aspect-square shrink-0 m-20 overflow-hidden">
+                            <img src="./assets/ca3.png" class="h-full w-full object-fit--cover" />
+                        </div>
+                        <div class="content_wrapper h-full grow m-20 py-20 relative">
+                            <img src="./assets/coma.png" class="absolute" />
+                            <h2 class="relative mb-10">Abbie Harvey</h2>
+                            <p class="relative">I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me being there for appointments. Older people need attention, love and care that they truly deserve.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="next" class="shrink-0 ml-20" onclick="carouselHandler('next')"><span>&gt;</span></div>
+            </div>
+            <div class="h-fit w-full flex justify-center mt-20">
+                <div class="dot active" onclick="carouselHandler('click', 0)"></div>
+                <div class="dot" onclick="carouselHandler('click', 1)"></div>
+                <div class="dot" onclick="carouselHandler('click', 2)"></div>
+            </div>
+        </div>
+
+        <!-- Organize section -->
+        <div class="container w-full pt-20">
+            <h1 class="understand-title"><span class="stroke-title">WE</span> CAN ORGANIZE EVERYTHING</h1>
+            <div class="flex justify-between items-start flex-wrap mb-20">
+                <div class="organize-text-wrapper">
+                    <p class="organize-content font-italic">Showing greater respect to older adults can be done in several ways : acknowledging and putting to use the talents and skills of older adults; creating intergenerational initiatives; and allowing older adults to stay active and independent for as long as possible.</p>
+                </div>
+                <div class="organize-text-wrapper ml-30 mr-30">
+                    <p class="organize-content">Showing greater respect to older adults can be done in several ways : acknowledging and putting to use the talents and skills of older adults; creating intergenerational initiatives; and allowing older adults to stay active and independent for as long as possible.</p>
+                </div>
+                <div class="organize-text-wrapper">
+                    <p class="organize-content">Showing greater respect to older adults can be done in several ways : acknowledging and putting to use the talents and skills of older adults; creating intergenerational initiatives; and allowing older adults to stay active and independent for as long as possible.</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-start flex-wrap">
+                <button type="button" class="primary-button info-button relative">
+                    <p class="flex item-center organize-btn">
+                        Needs Assessments
+                        <span class="info-icon">i</span>
+                    </p>
+                    <span class="info-message">We’re experienced in our individual crafts and understand how each one of
+                        our roles impacts your plan
+                        holistically.</span>
+                </button>
+                <button type="button" class="primary-button info-button relative">
+                    <p class="flex item-center organize-btn">
+                        Treatment Planning & Placement
+                        <span class="info-icon">i</span>
+                    </p>
+                    <span class="info-message">We’re experienced in our individual crafts and understand how each one of
+                        our roles impacts your plan
+                        holistically.</span>
+                </button>
+                <button type="button" class="primary-button info-button relative">
+                    <p class="flex item-center organize-btn">
+                        Transportation & Logistics
+                        <span class="info-icon">i</span>
+                    </p>
+                    <span class="info-message">We’re experienced in our individual crafts and understand how each one of
+                        our roles impacts your plan
+                        holistically.</span>
+                </button>
+                <button type="button" class="primary-button info-button relative">
+                    <p class="flex item-center organize-btn">
+                        Insurance Advocacy
+                        <span class="info-icon">i</span>
+                    </p>
+                    <span class="info-message">We’re experienced in our individual crafts and understand how each one of
+                        our roles impacts your plan
+                        holistically.</span>
+                </button>
+                <button type="button" class="primary-button info-button relative">
+                    <p class="flex item-center organize-btn">
+                        Employment Advocacy
+                        <span class="info-icon">i</span>
+                    </p>
+                    <span class="info-message">We’re experienced in our individual crafts and understand how each one of
+                        our roles impacts your plan
+                        holistically.</span>
+                </button>
+                <button type="button" class="primary-button info-button relative">
+                    <p class="flex item-center organize-btn">
+                        Aftercare Planning
+                        <span class="info-icon">i</span>
+                    </p>
+                    <span class="info-message">We’re experienced in our individual crafts and understand how each one of
+                        our roles impacts your plan
+                        holistically.</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- video secton -->
+    <div class="w-full overflow-hidden">
+        <div class="video-section-container">
+            <div class="w-50 relative">
+                <div class="green-layout relative z-2">
+                    <h1 class="understand-title" style="padding-top: 0;"><span class="stroke-title black-stroke-title">WATCH</span> THE VIDEO</h1>
+                    <div class="video-content-wrapper">
+                        <div class="flex justify-start">
+                            <p class="mr-20">✔</p>
+                            <div>
+                                <p class="video-sub-title">Needs Assessment</p>
+                                <p class="video-content">The Advocacy Evaluation Toolkit contains the instruments used to collect data for evaluating the Consumer Voices for Coverage program.</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <p class="mr-20">✔</p>
+                            <div>
+                                <p class="video-sub-title">Insurance Advocacy</p>
+                                <p class="video-content">We are committed to advocating for appropriate coverage and payment policies.</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <p class="mr-20">✔</p>
+                            <div>
+                                <p class="video-sub-title">Treatment Planning & Placement</p>
+                                <p class="video-content">Patients can better understand medical procedures, discharge instructions, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./assets/graybackgrounddesktop.png" class="background_desktop h-full w-full object-fit--cover absolute z-1 top-0 ml-20" style="object-position: 100% 50%;" />
+                <img src="./assets/greenbackgrounddesktop.png" class="background_desktop h-full w-full object-fit--cover absolute z-1 top-0" style="object-position: 100% 50%;" />
+                <img src="./assets/graybackgroundmobile.png" class="background_mobile h-full w-full absolute z-1 top-0 ml-20" style="object-position: 50% 0%;" />
+                <img src="./assets/greenbackgroundmobile.png" class="background_mobile h-full w-full absolute z-1 top-0" style="object-position: 50% 0%;" />
+            </div>
+            <div class="w-50 relative">
+                <div class="group-img-wrapper">
+                    <img src="./assets/maskGroup.png" class="background_desktop h-full absolute object-fit--cover" style="width: calc(100% + 100px);left: -100px;" />
+                    <img src="./assets/maskGroup.png" class="background_mobile w-full absolute object-fit--cover" style="height: calc(100% + 100px);top: -100px;" />
+                </div>
+                <div class="play-btn-wrapper">
+                    <button type="button" class="play-btn" onclick="handleVideo(true)">▶</button>
+                </div>
+            </div>
+        </div>
+
+        <!--  Video popup -->
+        <div id="video-popup" class="video-popup-wrapper hide">
+            <div class="aspect-video flex justify-center relative video-container">
+                <div class="close-btn flex justify-center rounded-full" onclick="handleVideo(false)">
+                    <img src="./assets/close.png" class="h-full w-full" />
+                </div>
+                <video src="./assets/video.mp4" autoplay></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer secton -->
+    <div id="footer" class="container w-full pt-20">
+        <p>@2021 Get an Intervention Inc. All rights reserved</p>
+        <p>Privacy Policy | Terms of use | Site Map</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

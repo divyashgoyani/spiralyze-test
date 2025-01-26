@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/icon.png" />
+
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Get an intervention</title>
+
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: #E5E5E5;
+        }
+        .card_wrapper {
+            width: 60%;
+            aspect-ratio: 16 / 9;
+        }
+        .back_card {
+            border-radius: 8px;
+            background-color: #F5F5F5;
+            transform: rotate(-8deg);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .front_card {
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            overflow: hidden;
+        }
+        .front_card h1 {
+            font-size: 40px;
+            color: #194D44;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .front_card p {
+            width: 80%;
+            text-align: center;
+            color: #333333;
+            opacity: 0.7;
+        }
+        .front_card img {
+            opacity: 0.3;
+        }
+
+        @media (max-width: 768px) {
+            .front_card h1 {
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+            .front_card p {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .card_wrapper {
+                width: 90%;
+                aspect-ratio: 16 / 9;
+            }
+            .front_card h1 {
+                font-size: 18px;
+            }
+            .front_card p {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h-full w-full flex justify-center items-center overflow-hidden">
+        <div class="card_wrapper relative">
+            <div class="back_card h-full w-full bg-black absolute top-0"></div>
+            <div class="front_card h-full w-full bg-white relative flex flex-col items-center justify-center">
+                <h1 class="relative z-1">Thank you for being awesome!</h1>
+                <p class="relative z-1">We have received your message and would like to thank you for writing to us. If your inquiry is urgent, please use the telephone number listed below to speak to one of our staff members. Otherwise, we will reply by email as soon as possible.</p>
+                <img src="./assets/background.jpg" class="absolute h-full w-full object-fit--cover" />
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
